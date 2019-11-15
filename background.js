@@ -1441,7 +1441,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./background.js?");
+eval("chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {\n  var message = tab.url;\n  chrome.tabs.sendMessage(tab.id, message); //sending url to content script\n});\n\n//# sourceURL=webpack:///./background.js?");
 
 /***/ })
 
